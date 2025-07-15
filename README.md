@@ -4,8 +4,6 @@
 
 Este é o projeto Frontend do desafio técnico para a EVOLUIR (fintech RPE), desenvolvido com foco em uma aplicação simples para gerenciar **clientes** e suas **faturas**.
 
-> ✅ [Repositório do projeto no GitHub](https://github.com/JohnHerbert1/DesafioTecnico-RPE-Front)
-
 ---
 
 ### Tecnologias utilizadas
@@ -72,11 +70,3 @@ cd DesafioTecnico-RPE-Front
 #### 🧾 Faturas do Cliente
 ![alt text](image-1.png)
 ---
-
-### 📌 Link do projeto
-
-➡️ [https://github.com/JohnHerbert1/DesafioTecnico-RPE-Front](https://github.com/JohnHerbert1/DesafioTecnico-RPE-Front)
-
----
-
-🚀 **Projeto feito com VS Code, JavaScript puro e muito café ☕!**
