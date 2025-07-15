@@ -1,4 +1,4 @@
-// Calcula idade a partir de dataNacimento (LocalDate)
+
 function calculateAge(dataNacimento) {
   if (!dataNacimento) return '—';
   const today = new Date();

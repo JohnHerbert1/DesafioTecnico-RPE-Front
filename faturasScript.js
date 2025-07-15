@@ -1,4 +1,4 @@
-// --- faturasScript.js ---
+
 
 const params     = new URLSearchParams(window.location.search);
 const clientId   = params.get('clientId');
@@ -12,7 +12,7 @@ function formatDate(d) {
   return isNaN(dt) ? '–' : dt.toLocaleDateString('pt-BR');
 }
 
-// mapeia B → Aberto, A → Atrasado, P → Pago
+
 function formatStatusFatura(code) {
   switch ((code || '').toString().toUpperCase()) {
     case 'B': return 'Aberto';
@@ -82,5 +82,4 @@ function goBack() {
   window.location.href = 'telaClients.html';
 }
 
-// dispara o carregamento
 loadFaturas();
