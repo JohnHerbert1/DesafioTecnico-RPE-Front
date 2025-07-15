@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Faturas do Cliente</title>
+  <style>
+    :root {
+      --bg-page: #eef2f7;
+      --header-bg: #1e3a8a;
+      --header-color: #ffffff;
+      --row-border: #d1d5db;
+      --btn-bg: #14b8a6;
+      --btn-hover: #0d9488;
+      --text-default: #111827;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: sans-serif;
+      background: var(--bg-page);
+      color: var(--text-default);
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;          /* fixa colunas */
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;        /* um pouco mais de padding horizontal */
+      border-bottom: 1px solid var(--row-border);
+      vertical-align: middle;       /* centraliza o conteúdo */
+      white-space: nowrap;          /* evita quebra estranha */
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    th {
+      background: var(--header-bg);
+      color: var(--header-color);
+      text-align: left;
+    }
+
+    /* larguras relativas para cada coluna */
+    th:nth-child(1), td:nth-child(1) { width: 15%; }  /* Valor */
+    th:nth-child(2), td:nth-child(2) { width: 20%; }  /* Vencimento */
+    th:nth-child(3), td:nth-child(3) { width: 15%; }  /* Status */
+    th:nth-child(4), td:nth-child(4) { width: 20%; }  /* Data Pagamento */
+    th:nth-child(5), td:nth-child(5) { width: 30%; }  /* Ações */
+
+    button {
+      padding: 0.5rem 1rem;
+      background: var(--btn-bg);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      white-space: nowrap;          /* não quebra linha dentro do botão */
+      line-height: 1.2;
+    }
+
+    button:hover {
+      background: var(--btn-hover);
+    }
+
+    /* opcional: botão “Voltar” fixo na parte de baixo */
+    .back-btn {
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Faturas de …</h1>
+  <table id="faturas-table">
+    <thead>
+      <tr>
+        <th>Valor (R$)</th>
+        <th>Vencimento</th>
+        <th>Status</th>
+        <th>Data Pagamento</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button class="back-btn" onclick="goBack()">Voltar à lista de clientes</button>
+
+  <!-- chama o script externo -->
+  <script src="faturasScript.js"></script>
+</body>
+</html>
